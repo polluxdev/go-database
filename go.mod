@@ -1,4 +1,4 @@
-module github.com/polluxdev/go-database
+module github.com/polluxdev/go-dbx
 
 go 1.24.0
 

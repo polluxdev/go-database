@@ -1,8 +1,8 @@
-# go-database
+# go-dbx
 
-# go-database - Database Connection Toolkit for Go
+# go-dbx - Database Connection Toolkit for Go
 
-`go-database` is a modular database connection package for Go, supporting PostgreSQL, MySQL, MongoDB, and Redis. It provides an easy and structured way to manage database connections in your Go projects.
+`go-dbx` is a modular database connection package for Go, supporting PostgreSQL, MySQL, MongoDB, and Redis. It provides an easy and structured way to manage database connections in your Go projects.
 
 ## Features
 - 🔌 **Modular:** Separate packages for each database.
@@ -11,4 +11,4 @@
 
 ## Installation
 ```sh
-go get github.com/polluxdev/go-database
+go get github.com/polluxdev/go-dbx

@@ -1,10 +1,10 @@
-package godatabase
+package dbx
 
 import (
-	"github.com/polluxdev/go-database/mongo"
-	"github.com/polluxdev/go-database/mysql"
-	"github.com/polluxdev/go-database/postgres"
-	"github.com/polluxdev/go-database/redis"
+	"github.com/polluxdev/go-dbx/mongo"
+	"github.com/polluxdev/go-dbx/mysql"
+	"github.com/polluxdev/go-dbx/postgres"
+	"github.com/polluxdev/go-dbx/redis"
 )
 
 type (
