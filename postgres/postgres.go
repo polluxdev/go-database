@@ -63,8 +63,6 @@ func New(dsn string, opts ...Option) (*Postgres, error) {
 		return nil, fmt.Errorf("postgres - New - connAttempts == 0: %w", err)
 	}
 
-	log.Println("PostgreSQL is connected successfully")
-
 	sqlDB, err := db.DB()
 	if err != nil {
 		return nil, fmt.Errorf("postgres - New - db.DB: %w", err)
@@ -76,6 +74,8 @@ func New(dsn string, opts ...Option) (*Postgres, error) {
 	sqlDB.SetConnMaxLifetime(time.Hour)
 
 	pg.DB = db
+
+	log.Println("PostgreSQL is connected successfully")
 
 	return pg, nil
 }

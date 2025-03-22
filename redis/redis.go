@@ -69,14 +69,14 @@ func New(dsn string, opts ...Option) (*Redis, error) {
 		return nil, fmt.Errorf("redis - New - connAttempts == 0: %w", err)
 	}
 
-	log.Println("Redis is connected successfully")
-
 	_, err = db.Ping(context.Background()).Result()
 	if err != nil {
 		return nil, fmt.Errorf("redis - New - Ping: %w", err)
 	}
 
 	rd.DB = db
+
+	log.Println("Redis is connected successfully")
 
 	return rd, nil
 }

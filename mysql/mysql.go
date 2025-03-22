@@ -101,8 +101,6 @@ func (m *MySQLManager) Connect(name string) error {
 		return fmt.Errorf("mysql - New - connAttempts == 0 for '%s': %w", name, err)
 	}
 
-	log.Printf("MySQL %s DB is connected successfully\n", name)
-
 	sqlDB, err := db.DB()
 	if err != nil {
 		return fmt.Errorf("mysql - New - db.DB for '%s': %w", name, err)
@@ -114,6 +112,8 @@ func (m *MySQLManager) Connect(name string) error {
 	sqlDB.SetConnMaxLifetime(time.Hour)
 
 	m.connections[name] = db
+
+	log.Printf("MySQL %s DB is connected successfully\n", name)
 
 	return nil
 }

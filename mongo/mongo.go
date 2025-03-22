@@ -69,8 +69,6 @@ func New(dsn string, opts ...Option) (*Mongo, error) {
 		return nil, fmt.Errorf("mongo - New - connAttempts == 0: %w", err)
 	}
 
-	log.Println("Mongo is connected successfully")
-
 	err = db.Ping(context.Background(), nil)
 	if err != nil {
 		return nil, fmt.Errorf("mongo - New - Ping: %w", err)
@@ -78,6 +76,8 @@ func New(dsn string, opts ...Option) (*Mongo, error) {
 
 	mg.client = db
 	mg.DB = db.Database(mg.dbName)
+
+	log.Println("Mongo is connected successfully")
 
 	return mg, nil
 }
